@@ -3,11 +3,11 @@
   tasks:
   - name: Play-1 and TASK-1
     ansible.builtin.debug:
-    msg: "Message from Play-1"
+      msg: "Message from Play-1"
 
 - name: Play-2
   hosts: localhost
   tasks:
   - name: Play-2 and TASK-2
     ansible.builtin.debug:
-    msg: "Messages from Play2"
+     msg: "Messages from Play2"
