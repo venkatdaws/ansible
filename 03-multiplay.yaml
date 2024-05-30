@@ -4,6 +4,7 @@
   - name: Play1 and Play2
     ansible.builtin.debug:
     msg: "Message from Play-1"
+    
 - name: Play-2
   hosts: localhost
   tasks:
