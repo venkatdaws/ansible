@@ -1,5 +1,0 @@
-- name: install nginx
-  hosts: web
-  tasks:
-  - name: pinging the server
-    ansible.builtin.ping:
