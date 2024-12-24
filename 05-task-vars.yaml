@@ -1,0 +1,13 @@
+- name: variables
+  hosts: localhost
+  vars:
+    Course: "Ansible"
+  tasks: 
+  - name: vars override
+    vars:
+      Course: "Devops"
+    ansible.builtin.debug:
+      msg: "Hello I am learning {{Course}}"
+  - name: print information
+    ansible.builtin.debug:
+      msg: "Hello I am learning {{Course}}"
