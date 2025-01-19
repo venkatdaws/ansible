@@ -1,0 +1,17 @@
+- name: vars datatypes
+  hosts: localhost
+  vars:
+    Course: Devops with AWS
+    Tools:
+    - Ansible
+    - Shell
+    Experience:
+      AWS: 2
+      Terraform: 3
+      Docker: 3
+    Realtime: true
+  tasks:
+  - name: print information
+    ansible.builtin.debug:
+      msg: "Hello I am learning {{Course}}, with tools {{ToolsExperience 
+      {{Experience}},and Realproject {{Realtime}}"
