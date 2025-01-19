@@ -1,0 +1,7 @@
+- name: vars from inventory
+  hosts: localhost
+  tasks:
+  - name: print information
+    ansible.builtin.debug:
+      msg: "Hello {{PERSON}} wishes {{WISHES}}"
+    
