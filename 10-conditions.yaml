@@ -1,0 +1,20 @@
+- name: ansible conditions
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: check user exists
+    ansible.builtin.debug: id expense
+    register: USER
+    ignore_errors: true
+
+  - name: print user info
+    ansible.builtin.debug:
+      msg: "The user is {{USER}}"
+  - name: create user
+    ansible.builtin.command: useradd expense
+    when: USER.rc !=0 #ondition
+  
+
+  - name: print info
+    ansible.builtin.debug:
+      msg: "hello conditions"
