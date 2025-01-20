@@ -5,3 +5,10 @@
     ansible.builtin.debug:
       msg: "Hello {{WISHES | default('welcome') }}"
       #msg: "Hello {{course | default('Ansible') }}"
+- name: convert to uppercase
+  tasks:
+    vars:
+      message: "Hello good morning"
+  - name: convert lower to upper
+    ansible.builtin.debug:
+      msg: "Convert the message to upper {{message | upper}}"
