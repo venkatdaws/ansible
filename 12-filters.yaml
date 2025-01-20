@@ -29,4 +29,16 @@
   - name: remove duplicates
     ansible.builtin.debug:
       msg: "After removing duplicates {{Duplicates | unique}}"
+- name: dictionary to list
+  hosts: localhost
+  vars:
+    Dictionary:
+      course: Ansible
+      Duration: 7days
+      Trainer: Venkat
+  tasks:
+  - name: convert from dictionary to list
+  ansible.builtin.debug:
+    msg: " Before convert {{Dictionary}}"
+    msg: " After convert {{Dictionary}}"
   
