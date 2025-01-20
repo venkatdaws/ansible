@@ -1,0 +1,10 @@
+- name: ansible loop
+  hosts: localhost
+  tasks:
+  - name: loop the list
+    ansible.builtin.debug:
+      msg: "looping the list of items like {{item}}"
+    item:
+    - item1
+    - item2
+    - item3
