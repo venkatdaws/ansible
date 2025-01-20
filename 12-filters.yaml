@@ -13,3 +13,11 @@
   - name: convert lower to upper
     ansible.builtin.debug:
       msg: "Convert the message to upper {{message | upper}}"
+- name: convert to lower
+  hosts: localhost
+  vars:
+    greetings: " WELCOME TO OUR TEAM"
+  tasks:
+  - name: coverting to lower
+    ansible.builtin.debug:
+      msg: "Hello {{greetings | lower}}"
