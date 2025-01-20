@@ -43,13 +43,13 @@
      msg: " After convert {{Dictionary | dict2items}}"
 - name: convert items to disctionary
   hosts: localhost
-    vars:
-      items:
-        - {'key': 'course', 'value': 'Ansible'}
-        - {'key': 'Duration', 'value': '7days'}
-        - {'key': 'Trainer', 'value': 'Venkat'}
-    tasks:
-    - name: Beforconverting to dictionary
-      ansible.builtin.debug:
-        msg: " converting the items {{items | items2dict}}"
+  vars:
+    items:
+     - {'key': 'course', 'value': 'Ansible'}
+     - {'key': 'Duration', 'value': '7days'}
+     - {'key': 'Trainer', 'value': 'Venkat'}
+  tasks:
+  - name: Beforconverting to dictionary
+    ansible.builtin.debug:
+      msg: " converting the items {{items | items2dict}}"
   
