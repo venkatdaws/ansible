@@ -21,3 +21,12 @@
   - name: coverting to lower
     ansible.builtin.debug:
       msg: "Hello {{greetings | lower}}"
+- name: distinct values
+  hosts: localhost
+  vars:
+    Duplicates: {1,1,2,2,3,3,4,4,5,5}
+  tasks:
+  - name: remove duplicates
+    ansible.builtin.debug:
+      msg: "After removing duplicates {{Duplucates | unique}}"
+  
