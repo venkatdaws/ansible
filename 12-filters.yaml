@@ -41,7 +41,8 @@
     ansible.builtin.debug:
      msg: " Before convert {{Dictionary}}"
      msg: " After convert {{Dictionary | dict2items}}"
-  - name: convert items to disctionary
+- name: convert items to disctionary
+  hosts: localhost
     vars:
       items:
         - {'key': 'course', 'value': 'Ansible'}
