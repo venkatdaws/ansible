@@ -17,4 +17,4 @@
 
   - name: print info
     ansible.builtin.debug:
-      msg: "hello conditions"devansible
+      msg: "hello conditions devansible"
