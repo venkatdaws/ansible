@@ -7,7 +7,7 @@
       #msg: "Hello {{course | default('Ansible') }}"
 - name: convert to uppercase
   hosts: localhost
-    vars:
+  vars:
       message: "Hello good morning"
   tasks:
   - name: convert lower to upper
