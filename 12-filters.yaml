@@ -28,5 +28,5 @@
   tasks:
   - name: remove duplicates
     ansible.builtin.debug:
-      msg: "After removing duplicates {{Duplucates | unique}}"
+      msg: "After removing duplicates {{Duplicates | unique}}"
   
