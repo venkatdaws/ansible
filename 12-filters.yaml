@@ -39,6 +39,6 @@
   tasks:
   - name: convert from dictionary to list
     ansible.builtin.debug:
-    msg: " Before convert {{Dictionary}}"
+     msg: " Before convert {{Dictionary}}"
     #msg: " After convert {{Dictionary}}"
   
