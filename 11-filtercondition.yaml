@@ -1,15 +1,15 @@
-- name: ansible filters
+- name : filter conditions
   hosts: localhost
   vars_prompt:
   - name: number
-    prompt: please eneter the number
+    prompt: please enter the number
     private: no
   tasks:
-  - name: Check the given number <10 and print
+  - name: check the number lessthan
     ansible.builtin.debug:
       msg: "The given number {{number}} is lessthan 10"
-    when: number | int < 10
-  - name: Check the number >10
+      when: number | int < 20
+  - name: check the number greaterthan
     ansible.builtin.debug:
-      msg: " The given number {{number}} is greaterthan 10"
-    when: number | int >= 10
+    msg: "The given number {{number}} is greater than 10"
+    when: number | int >=10
