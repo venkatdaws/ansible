@@ -41,4 +41,14 @@
     ansible.builtin.debug:
      msg: " Before convert {{Dictionary}}"
      msg: " After convert {{Dictionary | dict2items}}"
+  - name: convert items to disctionary
+    vars:
+      items:
+        - {'key': 'course', 'value': 'Ansible'}
+        - {'key': 'Duration', 'value': '7days'}
+        - {'key': 'Trainer', 'value': 'Venkat'}
+    tasks:
+    - name: Beforconverting to dictionary
+      ansible.builtin.debug:
+        msg: " converting the items {{items | items2dict}}"
   
