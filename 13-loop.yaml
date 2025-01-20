@@ -4,7 +4,7 @@
   - name: loop the list
     ansible.builtin.debug:
       msg: "looping the list of items like {{item}}"
-    item:
+    loop:
     - item1
     - item2
     - item3
